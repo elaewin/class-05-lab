@@ -25,12 +25,16 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a,b){
-
+function multiply(a,b) {
+  var product = a * b;
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
+  console.log(message);
+  console.log('The product of 4 and 7 is 28.');
+  return [product, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(4,7);
+testMultiply(4,7);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 

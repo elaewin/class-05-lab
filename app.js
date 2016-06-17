@@ -28,8 +28,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a,b) {
   var product = a * b;
   var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
-  console.log(message);
-  console.log('The product of 4 and 7 is 28.');
+  // console.log(message);
+  // console.log('The product of 4 and 7 is 28.');
   return [product, message];
 }
 
@@ -48,11 +48,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){
-
+  var sumOf3 = sum(sum(a, b)[0], c)[0];
+  var productOf3 = multiply((multiply(a, b)[0]), c)[0];
+  var addMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + sumOf3 + '.';
+  var multiplyMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productOf3 + '.';
+  console.log(sumOf3);
+  console.log(productOf3);
+  console.log(addMessage);
+  console.log('4 and 7 and 5 sum to 16.');
+  console.log(multiplyMessage);
+  console.log('The product of 4 and 7 and 5 is 140.');
+  return [sumOf3, productOf3, addMessage, multiplyMessage];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. don't forget to create a new branch for your work on the next question!
 
@@ -122,7 +132,7 @@ function testMultiply() {
 }
 
 function testSumAndMultiply() {
-  if (sumAndMultiply(4, 7, 5)[1] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[2] === 'The product of 4 and 7 and 5 is 140.') {
+  if (sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.') {
     console.log('%c TEST FOR sumAndMultiply() PASSES', 'color: green');
   } else {
     console.log('%c TEST FOR sumAndMultiply() FAILS', 'color: red');

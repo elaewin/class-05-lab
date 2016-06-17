@@ -52,12 +52,12 @@ function sumAndMultiply(a,b,c){
   var productOf3 = multiply((multiply(a, b)[0]), c)[0];
   var addMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + sumOf3 + '.';
   var multiplyMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productOf3 + '.';
-  console.log(sumOf3);
-  console.log(productOf3);
-  console.log(addMessage);
-  console.log('4 and 7 and 5 sum to 16.');
-  console.log(multiplyMessage);
-  console.log('The product of 4 and 7 and 5 is 140.');
+  // console.log(sumOf3);
+  // console.log(productOf3);
+  // console.log(addMessage);
+  // console.log('4 and 7 and 5 sum to 16.');
+  // console.log(multiplyMessage);
+  // console.log('The product of 4 and 7 and 5 is 140.');
   return [sumOf3, productOf3, addMessage, multiplyMessage];
 }
 
@@ -76,12 +76,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 testArray = [2,3,4];
 function sumArray(testArray){
-
+  var addsArray = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0];
+  var message = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + addsArray + ' is their sum.';
+  // console.log(addsArray);
+  // console.log('Message is: ' + message);
+  return [addsArray, message];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
